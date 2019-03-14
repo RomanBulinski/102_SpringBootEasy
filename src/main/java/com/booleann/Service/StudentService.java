@@ -1,8 +1,10 @@
 package com.booleann.Service;
 
+import com.booleann.DAO.FakeStudentDAOImpl;
 import com.booleann.DAO.StudentDAO;
 import com.booleann.Entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -10,7 +12,9 @@ import java.util.Collection;
 @Service
 public class StudentService {
 
+    @Qualifier("mongolDate")
     @Autowired
+//    @Qualifier("fakeData")
     private StudentDAO studentDAO;
 
     public Collection<Student> getAllStudents(){
