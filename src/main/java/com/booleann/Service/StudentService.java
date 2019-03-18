@@ -12,7 +12,7 @@ import java.util.Collection;
 @Service
 public class StudentService {
 
-    @Qualifier("mongolDate")
+    @Qualifier("fakeDate")
     @Autowired
 //    @Qualifier("fakeData")
     private StudentDAO studentDAO;

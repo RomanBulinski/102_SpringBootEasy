@@ -21,8 +21,10 @@ public class StudentController {
         return  studentService.getAllStudents();
     }
 
+
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public Student getStudentById(@PathVariable("id") int id){
+
         return  studentService.getStudentById(id);
     }
 
@@ -33,6 +35,7 @@ public class StudentController {
 
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void deleteStudentById(@RequestBody Student student){
+
         studentService.uptudateStudent(student);
     }
 

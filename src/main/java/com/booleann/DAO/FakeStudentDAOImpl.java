@@ -47,7 +47,6 @@ public class FakeStudentDAOImpl implements StudentDAO {
         students.put(student.getId(), student);
     }
 
-
     @Override
     public void insertStudent(Student student) {
         this.students.put(student.getId(),student);
